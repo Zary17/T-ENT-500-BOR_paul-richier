@@ -1,1 +1,0 @@
-# T-ENT-500-BOR_paul-richier
