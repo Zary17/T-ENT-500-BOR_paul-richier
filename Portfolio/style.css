@@ -45,22 +45,22 @@ section, #home, .prez-myself {
     padding: 2rem 1.2rem 4rem;
 }
 
-/* Shared base for card-like elements: info, skills, projects */
+/* Shared base for card-like elements: info, skills, projects
+   Reduce heavy shadows and avoid persistent will-change to lower painting cost. */
 .info-card, .skill-card, .project-card {
     background: var(--card);
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
     transition: transform .18s cubic-bezier(.2,.9,.2,1), box-shadow .18s ease;
-    will-change: transform, box-shadow;
 }
 
 /* Unified hover/focus for card-like elements */
 .info-card:hover, .info-card:focus,
 .skill-card:hover, .skill-card:focus,
 .project-card:hover, .project-card:focus {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 18px 42px rgba(0,0,0,0.55);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.50);
     outline: none;
 }
 
